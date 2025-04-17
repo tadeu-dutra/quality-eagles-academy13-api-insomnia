@@ -24,5 +24,6 @@ jobs:
         run: inso --version
 
       - name: Run Insomnia API Collection
-        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter spec
+        # run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter spec
+        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter-junit-export results.xml
         
