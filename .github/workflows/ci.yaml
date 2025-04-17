@@ -25,5 +25,10 @@ jobs:
 
       - name: Run Insomnia API Collection
         # run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter spec
-        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter-junit-export results.xml
-        
+        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter-junit-export junit-report.xml
+
+      - name: Upload JUnit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-report
+          path: junit_report.xml
